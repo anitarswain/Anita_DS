@@ -15,7 +15,7 @@ This data science project series walks through step by step process of how to bu
 1. Create EC2 instance using amazon console, also in security group add a rule to allow HTTP incoming traffic
 2. Now connect to your instance using a command like this,
 ```
-ssh -i "C:\Users\Viral\.ssh\Banglore.pem" ubuntu@ec2-3-133-88-210.us-east-2.compute.amazonaws.com
+ssh -i "bhpkey.pem" ubuntu@ec2-98-81-234-220.compute-1.amazonaws.com
 ```
 3. nginx setup
    1. Install nginx on EC2 instance using these commands,
@@ -65,7 +65,9 @@ ssh -i "C:\Users\Viral\.ssh\Banglore.pem" ubuntu@ec2-3-133-88-210.us-east-2.comp
 7. Now install python packages and start flask server
 ```
 sudo apt-get install python3-pip
-sudo pip3 install -r /home/ubuntu/BangloreHomePrices/server/requirements.txt
+sudo apt install python3-numpy
+sudo apt install python3-flask
+sudo apt install python3-sklearn
 python3 /home/ubuntu/BangloreHomePrices/client/server.py
 ```
 Running last command above will prompt that server is running on port 5000.
